@@ -1,0 +1,11 @@
+{
+    "titular": "Alex Machado",
+    "cpf": "123.456.789-01",
+    "agencia": "101",
+    "conta": "1003-1",
+    "saldo": 150.0,
+    "extrato": [
+        "Depósito: R$ 100.00",
+        "Saque: R$ 50.00"
+    ]
+}

@@ -19,7 +19,7 @@ class Conta:
             f"CPF: {self.cpf} \n"
             f"Agência: {self.agencia} \n"
             f"Conta: {self.conta} \n"
-            f"Saldo: {self.saldo:.2}"
+            f"Saldo: {self.saldo:.2f}"
             )
     
     def depositar(self, valor):
@@ -41,12 +41,12 @@ class Conta:
 
     def salvar_extrato_em_json(self):
         dados = {
-            "titular": self.titular,
-            "cpf": self.cpf,
-            "agencia": self.agencia,
-            "conta": self.conta,
-            "saldo": self.saldo,
-            "extrato": self.gerar_extrato()
+            "Titular": self.titular,
+            "CPF": self.cpf,
+            "Agencia": self.agencia,
+            "Conta": self.conta,
+            "Saldo": self.saldo,
+            "Extrato": self.gerar_extrato()
         }
         with open(f"atividades/atividade_13/extrato_{self.conta}.json", "w", encoding="utf-8") as f:
             json.dump(dados, f, ensure_ascii=False, indent=4)

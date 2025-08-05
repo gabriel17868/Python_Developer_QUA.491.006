@@ -20,9 +20,8 @@ import classe as cl
 if __name__ == "__main__":
     while True:
         try:
-            fu.limpar_tela()
 
-            print(f"{'-'*20} MENU {"-"*20}")
+            print(f"{'-'*20} BANCO COBRA {"-"*20}")
             print("1 - Criar conta.")
             print("2 - Consultar dados.")
             print("3 - Depositar valor.")
@@ -31,13 +30,15 @@ if __name__ == "__main__":
             print("6 - Sair do programa.")
             opcao = input("Informe a opção desejada: ").strip()
 
+            fu.limpar_tela()
+
             match opcao:
                 case "1":
                     titular = input("Informe o nome do titular: ").strip().title()
                     cpf = input("Informe o CPF: ").strip()
                     agencia = input("Informe a agência: ").strip()
                     conta = input("Informe o número da conta: ").strip()
-                    saldo = float(input("Informe o saldo inicial: ").strip())
+                    saldo = float(input("Informe o saldo inicial: "))
                     conta = cl.Conta(titular, cpf, agencia, conta, saldo)
                     print("Conta criada com sucesso!")
                     input("\nPressione Enter para continuar...")
@@ -56,7 +57,7 @@ if __name__ == "__main__":
                 case "3":
                     try:
                         if conta:
-                            valor = float(input("Informe o valor do depósito: "))
+                            valor = float(input("Informe o valor do depósito: ").replace(",","."))
                             if conta.depositar(valor):
                                 print("Depósito realizado com sucesso!")
                             else:
