@@ -1,7 +1,4 @@
 # Superclasse ou classe-pai
-from dotenv import set_key
-from fastapi.background import P
-
 
 class Pessoa:
     # Construtor
