@@ -1,0 +1,34 @@
+[
+    {
+        "nome": "Gabriel",
+        "data_nascimento": "30/04/1998",
+        "CPF": "0000000000",
+        "email": "gabriel@gmail.com",
+        "telefone": "61999999999",
+        "filme": "Tropa de Elite"
+    },
+    {
+        "nome": "Janaina",
+        "data_nascimento": "12/04/1978",
+        "CPF": "8888888888",
+        "email": "janaina@gmail.com",
+        "telefone": "6199999999",
+        "filme": "Harry Potter"
+    },
+    {
+        "nome": "Jardel",
+        "data_nascimento": "30/08/1992",
+        "CPF": "0000000000",
+        "email": "jardel@gmai.com",
+        "telefone": "619999999999",
+        "filme": "As Branquelas"
+    },
+    {
+        "nome": "Daniel",
+        "data_nascimento": "10/02/1988",
+        "CPF": "00000000000",
+        "email": "daniel@gmail.com",
+        "telefone": "6199999999999",
+        "filme": "Senhor dos Aneis"
+    }
+]

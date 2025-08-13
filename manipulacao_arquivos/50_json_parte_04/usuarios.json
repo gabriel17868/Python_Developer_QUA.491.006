@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Gabriel Maraschin",
+        "idade": 27,
+        "email": "gabriel@gmail.com"
+    },
+    {
+        "nome": "Janaina Maraschin",
+        "idade": 49,
+        "email": "janaina@gmail.com"
+    },
+    {
+        "nome": "Rafal Alencar",
+        "idade": 77,
+        "email": "rafal@email.com"
+    },
+    {
+        "nome": "Amanda Evelyn",
+        "idade": 22,
+        "email": "evelyn@gmail.com"
+    }
+]

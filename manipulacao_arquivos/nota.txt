@@ -1,0 +1,3 @@
+Este é o novo texto que será gravado no arquivo para aula de Python.
+Adicionando o texto em um arquivo que já possui um texto anterior.
+novo texto escrito pela pelo código 45 

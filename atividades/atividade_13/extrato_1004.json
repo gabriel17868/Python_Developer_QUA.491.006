@@ -1,0 +1,11 @@
+{
+    "titular": "Janaina",
+    "cpf": "00000000000",
+    "agencia": "003",
+    "conta": "1004",
+    "saldo": 3.0,
+    "extrato": [
+        "Depósito: R$ 3.00",
+        "Saque: R$ 2.00"
+    ]
+}
