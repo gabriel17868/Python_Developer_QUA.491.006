@@ -9,8 +9,8 @@ def tirar_credenciais():
 def main():
     auto.PAUSE = 0.5
 
-    usuario = input("Informe o user.name: ").strip().lower()
-    email = input("Informe o user.email: ").strip().lower()
+    usuario = "gabriel17868"
+    email = "gabrielmaraschin123@gmail.com"
     commit = input("Informe a frase de commit: ")
 
     tirar_credenciais()
