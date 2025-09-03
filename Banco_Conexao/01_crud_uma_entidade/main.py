@@ -21,7 +21,7 @@ def main():
         print("3 - Pesquisar pessoas")
         print("4 - Alterar dados de uma pessoa")
         print("5 - Excluir uma pessoa")
-        print("6 - Exportar para CSV")
+        print("6 - Exportar para Excel")
         print("7 - Sair do programa")
         opcao = input("Informe a opção desejada: ").strip()
         md.limpar()
@@ -42,7 +42,9 @@ def main():
                 md.excluir_pessoa(session, Pessoa)
                 continue
             case "6":
-                md.exportar(engine)
+                md.exportar_excel(session, Pessoa)
+                md.exportar_CSV(engine)
+                continue
             case "7":
                 print("Programa encerrado")
                 break

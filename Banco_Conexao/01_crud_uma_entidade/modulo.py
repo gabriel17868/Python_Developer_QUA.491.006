@@ -198,10 +198,30 @@ def excluir_pessoa(session, Pessoa):
 
 # TODO: Crie uma função que exporte o banco em CSV
 
-def exportar(engine):
+def exportar_CSV(engine):
     sql_query = "SELECT * FROM pessoa"
     df = pd.read_sql_query(sql_query, engine)
 
-    df.to_csv('dados_exportados.csv', index=False)
+    df.to_csv('01_crud_uma_entidade/planilhas_exportadas/pessoas.csv', index=False)
 
     print("Dados exportados para com sucesso.")
+
+def exportar_excel(session, Pessoa):
+    try:
+        pessoas = session.query(Pessoa).all()
+        # Cria uma lista de dicionários com os dados das pessoas
+        dados = [
+            {
+                "ID": pessoa.id_pessoa,
+                "nome": pessoa.nome,
+                "email": pessoa.email,
+                "Data de Nascimento": pessoa.data_nascimento.strftime("%d/%m/%Y")
+            }
+            for pessoa in pessoas
+        ]
+        df = pd.DataFrame(dados)
+        df.to_excel("01_crud_uma_entidade/planilhas_exportadas/pessoas.xlsx", index=False)
+        print("Dados exportados para pessoas.xlsx com sucesso.")
+
+    except Exception as e:
+        print(f"Erroa ao exportar dados: {e}.")
