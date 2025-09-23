@@ -28,7 +28,7 @@
                         <a class="nav-link" aria-current="page" href="/crud_app">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Cadastrar Pessoa</a>
+                        <a class="nav-link active" href="#">Alterar Dados</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -42,16 +42,16 @@
 
     <!-- container -->
     <div class="container">
-        <form action="{% url 'cadastro_pessoa' %}" method="POST">
+        <form action="{% url 'alterar_pessoa' pessoa.id_pessoa %}" method="POST">
             {% csrf_token %}
-            <h1>Cadastrar pessoas</h1>
+            <h1>Alterar dados</h1>
             <hr class="mb-5">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-8">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Nome completo</span>
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" name="nome" required>
+                            aria-describedby="inputGroup-sizing-default" name="nome" value="{{ pessoa.nome }}" required>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" name="email" required>
+                            aria-describedby="inputGroup-sizing-default" name="email" value="{{ pessoa.email }}" required>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="input-group mb-5">
                         <span class="input-group-text" id="inputGroup-sizing-default">CPF</span>
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" name="cpf" required>
+                            aria-describedby="inputGroup-sizing-default" name="cpf" value="{{ pessoa.cpf }}" required>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
             <!-- Botão-->
              <div class="row">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-left">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary">Alterar</button>
                 </div>
              </div>
         </form>
